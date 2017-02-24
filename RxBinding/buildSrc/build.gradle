@@ -1,0 +1,15 @@
+apply plugin: 'groovy'
+
+apply from: rootProject.file('../dependencies.gradle')
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  compile gradleApi()
+  compile localGroovy()
+  compile rootProject.ext.androidPlugin
+  compile rootProject.ext.javaParser
+  compile rootProject.ext.rxJava
+}
